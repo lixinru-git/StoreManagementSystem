@@ -21,12 +21,6 @@ partial class UC_Product
     private void InitializeComponent()
     {
         dgvProducts = new DataGridView();
-        txtSearch = new TextBox();
-        btnSearch = new Button();
-        btnAdd = new Button();
-        btnEdit = new Button();
-        btnDelete = new Button();
-        lblTitle = new Label();
         dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
         dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
         dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
@@ -35,6 +29,12 @@ partial class UC_Product
         dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
         dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
         dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+        txtSearch = new TextBox();
+        btnSearch = new Button();
+        btnAdd = new Button();
+        btnEdit = new Button();
+        btnDelete = new Button();
+        lblTitle = new Label();
         ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
         SuspendLayout();
         // 
@@ -51,58 +51,6 @@ partial class UC_Product
         dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         dgvProducts.Size = new Size(770, 480);
         dgvProducts.TabIndex = 6;
-        // 
-        // txtSearch
-        // 
-        txtSearch.Location = new Point(32, 67);
-        txtSearch.Name = "txtSearch";
-        txtSearch.Size = new Size(250, 30);
-        txtSearch.TabIndex = 1;
-        // 
-        // btnSearch
-        // 
-        btnSearch.Location = new Point(304, 67);
-        btnSearch.Name = "btnSearch";
-        btnSearch.Size = new Size(70, 40);
-        btnSearch.TabIndex = 2;
-        btnSearch.Text = "搜索";
-        btnSearch.Click += BtnSearch_Click;
-        // 
-        // btnAdd
-        // 
-        btnAdd.Location = new Point(395, 67);
-        btnAdd.Name = "btnAdd";
-        btnAdd.Size = new Size(146, 40);
-        btnAdd.TabIndex = 3;
-        btnAdd.Text = "＋ 添加商品";
-        btnAdd.Click += BtnAdd_Click;
-        // 
-        // btnEdit
-        // 
-        btnEdit.Location = new Point(559, 69);
-        btnEdit.Name = "btnEdit";
-        btnEdit.Size = new Size(92, 38);
-        btnEdit.TabIndex = 4;
-        btnEdit.Text = "✏ 编辑";
-        btnEdit.Click += BtnEdit_Click;
-        // 
-        // btnDelete
-        // 
-        btnDelete.Location = new Point(685, 67);
-        btnDelete.Name = "btnDelete";
-        btnDelete.Size = new Size(89, 40);
-        btnDelete.TabIndex = 5;
-        btnDelete.Text = "✕ 删除";
-        btnDelete.Click += BtnDelete_Click;
-        // 
-        // lblTitle
-        // 
-        lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
-        lblTitle.Location = new Point(32, 10);
-        lblTitle.Name = "lblTitle";
-        lblTitle.Size = new Size(214, 54);
-        lblTitle.TabIndex = 0;
-        lblTitle.Text = "商品管理";
         // 
         // dataGridViewTextBoxColumn1
         // 
@@ -159,6 +107,58 @@ partial class UC_Product
         dataGridViewTextBoxColumn8.MinimumWidth = 8;
         dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
         dataGridViewTextBoxColumn8.ReadOnly = true;
+        // 
+        // txtSearch
+        // 
+        txtSearch.Location = new Point(32, 67);
+        txtSearch.Name = "txtSearch";
+        txtSearch.Size = new Size(250, 30);
+        txtSearch.TabIndex = 1;
+        // 
+        // btnSearch
+        // 
+        btnSearch.Location = new Point(304, 67);
+        btnSearch.Name = "btnSearch";
+        btnSearch.Size = new Size(70, 40);
+        btnSearch.TabIndex = 2;
+        btnSearch.Text = "搜索";
+        btnSearch.Click += BtnSearch_Click;
+        // 
+        // btnAdd
+        // 
+        btnAdd.Location = new Point(395, 67);
+        btnAdd.Name = "btnAdd";
+        btnAdd.Size = new Size(146, 40);
+        btnAdd.TabIndex = 3;
+        btnAdd.Text = "＋ 添加商品";
+        btnAdd.Click += BtnAdd_Click;
+        // 
+        // btnEdit
+        // 
+        btnEdit.Location = new Point(559, 69);
+        btnEdit.Name = "btnEdit";
+        btnEdit.Size = new Size(92, 38);
+        btnEdit.TabIndex = 4;
+        btnEdit.Text = "✏ 编辑";
+        btnEdit.Click += BtnEdit_Click;
+        // 
+        // btnDelete
+        // 
+        btnDelete.Location = new Point(685, 67);
+        btnDelete.Name = "btnDelete";
+        btnDelete.Size = new Size(89, 40);
+        btnDelete.TabIndex = 5;
+        btnDelete.Text = "✕ 删除";
+        btnDelete.Click += BtnDelete_Click;
+        // 
+        // lblTitle
+        // 
+        lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
+        lblTitle.Location = new Point(32, 10);
+        lblTitle.Name = "lblTitle";
+        lblTitle.Size = new Size(214, 54);
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "商品管理";
         // 
         // UC_Product
         // 
