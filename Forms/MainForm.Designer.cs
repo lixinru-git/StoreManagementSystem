@@ -50,7 +50,7 @@ partial class MainForm
         pnlSidebar.Dock = DockStyle.Left;
         pnlSidebar.Location = new Point(0, 0);
         pnlSidebar.Name = "pnlSidebar";
-        pnlSidebar.Size = new Size(180, 1007);
+        pnlSidebar.Size = new Size(180, 933);
         pnlSidebar.TabIndex = 0;
         // 
         // flpMenu
@@ -67,7 +67,7 @@ partial class MainForm
         flpMenu.Location = new Point(0, 0);
         flpMenu.Name = "flpMenu";
         flpMenu.Padding = new Padding(5, 10, 5, 10);
-        flpMenu.Size = new Size(180, 1007);
+        flpMenu.Size = new Size(180, 933);
         flpMenu.TabIndex = 0;
         flpMenu.WrapContents = false;
         // 
@@ -172,7 +172,7 @@ partial class MainForm
         pnlContent.Dock = DockStyle.Fill;
         pnlContent.Location = new Point(180, 60);
         pnlContent.Name = "pnlContent";
-        pnlContent.Size = new Size(1210, 917);
+        pnlContent.Size = new Size(1145, 843);
         pnlContent.TabIndex = 2;
         // 
         // pnlTopBar
@@ -183,7 +183,7 @@ partial class MainForm
         pnlTopBar.Dock = DockStyle.Top;
         pnlTopBar.Location = new Point(180, 0);
         pnlTopBar.Name = "pnlTopBar";
-        pnlTopBar.Size = new Size(1210, 60);
+        pnlTopBar.Size = new Size(1145, 60);
         pnlTopBar.TabIndex = 1;
         // 
         // lblTitle
@@ -202,7 +202,7 @@ partial class MainForm
         lblTodaySales.AutoSize = true;
         lblTodaySales.Font = new Font("微软雅黑", 12F);
         lblTodaySales.ForeColor = Color.FromArgb(255, 255, 200);
-        lblTodaySales.Location = new Point(580, 18);
+        lblTodaySales.Location = new Point(891, 18);
         lblTodaySales.Name = "lblTodaySales";
         lblTodaySales.Size = new Size(192, 31);
         lblTodaySales.TabIndex = 1;
@@ -214,10 +214,10 @@ partial class MainForm
         lblStatus.Dock = DockStyle.Bottom;
         lblStatus.Font = new Font("微软雅黑", 9F);
         lblStatus.ForeColor = Color.White;
-        lblStatus.Location = new Point(180, 977);
+        lblStatus.Location = new Point(180, 903);
         lblStatus.Name = "lblStatus";
         lblStatus.Padding = new Padding(10, 0, 0, 0);
-        lblStatus.Size = new Size(1210, 30);
+        lblStatus.Size = new Size(1145, 30);
         lblStatus.TabIndex = 3;
         lblStatus.Text = "就绪";
         // 
@@ -225,7 +225,7 @@ partial class MainForm
         // 
         AutoScaleDimensions = new SizeF(11F, 24F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1390, 1007);
+        ClientSize = new Size(1325, 933);
         Controls.Add(pnlContent);
         Controls.Add(lblStatus);
         Controls.Add(pnlTopBar);
