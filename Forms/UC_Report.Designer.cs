@@ -47,80 +47,102 @@ partial class UC_Report
         this.grpChart2.SuspendLayout();
         this.SuspendLayout();
 
+        //
+        // UC_Report
+        //
+        this.AutoScaleMode = AutoScaleMode.Font;
+        this.Font = new Font("微软雅黑", 9F);
+        this.Name = "UC_Report";
+        this.Size = new Size(780, 500);
+
         // lblTitle
         this.lblTitle.Text = "数据统计";
         this.lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
-        this.lblTitle.Location = new Point(10, 5);
-        this.lblTitle.Size = new Size(160, 30);
+        this.lblTitle.Location = new Point(10, 8);
+        this.lblTitle.Size = new Size(120, 26);
+        this.lblTitle.Name = "lblTitle";
 
         // lblPeriod
         this.lblPeriod.Font = new Font("微软雅黑", 9F);
-        this.lblPeriod.Location = new Point(10, 38);
-        this.lblPeriod.Size = new Size(300, 20);
+        this.lblPeriod.Location = new Point(10, 36);
+        this.lblPeriod.Size = new Size(350, 20);
+        this.lblPeriod.Text = "统计周期: 选择日期后点击刷新";
+        this.lblPeriod.Name = "lblPeriod";
 
         // lblTotalSales
-        this.lblTotalSales.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
+        this.lblTotalSales.Font = new Font("微软雅黑", 13F, FontStyle.Bold);
         this.lblTotalSales.ForeColor = Color.FromArgb(70, 130, 180);
-        this.lblTotalSales.Location = new Point(10, 60);
-        this.lblTotalSales.Size = new Size(200, 28);
+        this.lblTotalSales.Location = new Point(10, 58);
+        this.lblTotalSales.Size = new Size(180, 25);
         this.lblTotalSales.Text = "总销售额: ¥ 0.00";
+        this.lblTotalSales.Name = "lblTotalSales";
 
         // lblOrderCount
-        this.lblOrderCount.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
+        this.lblOrderCount.Font = new Font("微软雅黑", 13F, FontStyle.Bold);
         this.lblOrderCount.ForeColor = Color.Green;
-        this.lblOrderCount.Location = new Point(230, 60);
-        this.lblOrderCount.Size = new Size(200, 28);
+        this.lblOrderCount.Location = new Point(210, 58);
+        this.lblOrderCount.Size = new Size(180, 25);
         this.lblOrderCount.Text = "总订单数: 0";
+        this.lblOrderCount.Name = "lblOrderCount";
 
         // lblFrom
         this.lblFrom.Text = "从:";
-        this.lblFrom.Location = new Point(10, 100);
+        this.lblFrom.Location = new Point(10, 90);
         this.lblFrom.Size = new Size(25, 25);
+        this.lblFrom.Name = "lblFrom";
 
         // dtpFrom
-        this.dtpFrom.Location = new Point(35, 98);
-        this.dtpFrom.Size = new Size(150, 23);
+        this.dtpFrom.Location = new Point(35, 88);
+        this.dtpFrom.Size = new Size(140, 23);
         this.dtpFrom.Value = DateTime.Today.AddDays(-30);
+        this.dtpFrom.Name = "dtpFrom";
 
         // lblTo
         this.lblTo.Text = "到:";
-        this.lblTo.Location = new Point(195, 100);
+        this.lblTo.Location = new Point(185, 90);
         this.lblTo.Size = new Size(25, 25);
+        this.lblTo.Name = "lblTo";
 
         // dtpTo
-        this.dtpTo.Location = new Point(220, 98);
-        this.dtpTo.Size = new Size(150, 23);
+        this.dtpTo.Location = new Point(210, 88);
+        this.dtpTo.Size = new Size(140, 23);
+        this.dtpTo.Name = "dtpTo";
 
         // btnRefresh
         this.btnRefresh.Text = "刷新";
-        this.btnRefresh.Location = new Point(385, 96);
+        this.btnRefresh.Location = new Point(365, 86);
         this.btnRefresh.Size = new Size(60, 28);
         this.btnRefresh.Click += this.BtnRefresh_Click;
+        this.btnRefresh.Name = "btnRefresh";
 
         // grpChart1 - 每日销售额趋势
         this.grpChart1.Text = "每日销售额趋势";
-        this.grpChart1.Location = new Point(10, 135);
-        this.grpChart1.Size = new Size(430, 230);
-        this.chartSales.Location = new Point(5, 20);
-        this.chartSales.Size = new Size(420, 205);
+        this.grpChart1.Location = new Point(10, 120);
+        this.grpChart1.Name = "grpChart1";
+        this.grpChart1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+        this.grpChart1.Size = new Size(375, 360);
+        this.chartSales.Dock = DockStyle.Fill;
         this.chartSales.ChartAreas.Add(new ChartArea("Default"));
         this.chartSales.ChartAreas["Default"].AxisX.Title = "日期";
         this.chartSales.ChartAreas["Default"].AxisY.Title = "销售额 (¥)";
         this.chartSales.Legends.Add(new Legend("Legend"));
         this.chartSales.Legends["Legend"].Docking = Docking.Bottom;
+        this.chartSales.Name = "chartSales";
         this.grpChart1.Controls.Add(this.chartSales);
 
-        // grpChart2 - 热销商品
+        // grpChart2 - 热销商品 Top 10
         this.grpChart2.Text = "热销商品 Top 10";
-        this.grpChart2.Location = new Point(455, 135);
-        this.grpChart2.Size = new Size(320, 230);
-        this.chartTopProducts.Location = new Point(5, 20);
-        this.chartTopProducts.Size = new Size(310, 205);
+        this.grpChart2.Location = new Point(395, 120);
+        this.grpChart2.Name = "grpChart2";
+        this.grpChart2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        this.grpChart2.Size = new Size(375, 360);
+        this.chartTopProducts.Dock = DockStyle.Fill;
         this.chartTopProducts.ChartAreas.Add(new ChartArea("Default2"));
         this.chartTopProducts.ChartAreas["Default2"].AxisX.Title = "商品";
         this.chartTopProducts.ChartAreas["Default2"].AxisY.Title = "销售额 (¥)";
         this.chartTopProducts.Legends.Add(new Legend("Legend2"));
         this.chartTopProducts.Legends["Legend2"].Docking = Docking.Bottom;
+        this.chartTopProducts.Name = "chartTopProducts";
         this.grpChart2.Controls.Add(this.chartTopProducts);
 
         this.Controls.Add(this.lblTitle);
@@ -140,6 +162,5 @@ partial class UC_Report
         this.grpChart1.ResumeLayout(false);
         this.grpChart2.ResumeLayout(false);
         this.ResumeLayout(false);
-        this.PerformLayout();
     }
 }
