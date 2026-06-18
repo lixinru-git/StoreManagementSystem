@@ -29,6 +29,9 @@ partial class UC_Sale
     private Button btnFindMember;
     private Label lblPay;
     private Label lblPhone;
+    private Label lblS;
+    private Label lblD;
+    private Label lblT;
 
     protected override void Dispose(bool disposing)
     {
@@ -225,22 +228,22 @@ partial class UC_Sale
         this.grpCheckout.Controls.Add(this.btnCheckout);
 
         // 小计/折扣/合计标签(静态文本)
-        Label lblS = new Label();
-        lblS.Text = "小计:";
-        lblS.Location = new Point(10, 140);
-        lblS.Size = new Size(80, 25);
-        this.grpCheckout.Controls.Add(lblS);
-        Label lblD = new Label();
-        lblD.Text = "会员折扣:";
-        lblD.Location = new Point(10, 170);
-        lblD.Size = new Size(80, 25);
-        this.grpCheckout.Controls.Add(lblD);
-        Label lblT = new Label();
-        lblT.Text = "合计:";
-        lblT.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
-        lblT.Location = new Point(10, 210);
-        lblT.Size = new Size(80, 30);
-        this.grpCheckout.Controls.Add(lblT);
+        this.lblS = new Label();
+        this.lblS.Text = "小计:";
+        this.lblS.Location = new Point(10, 140);
+        this.lblS.Size = new Size(80, 25);
+        this.grpCheckout.Controls.Add(this.lblS);
+        this.lblD = new Label();
+        this.lblD.Text = "会员折扣:";
+        this.lblD.Location = new Point(10, 170);
+        this.lblD.Size = new Size(80, 25);
+        this.grpCheckout.Controls.Add(this.lblD);
+        this.lblT = new Label();
+        this.lblT.Text = "合计:";
+        this.lblT.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+        this.lblT.Location = new Point(10, 210);
+        this.lblT.Size = new Size(80, 30);
+        this.grpCheckout.Controls.Add(this.lblT);
 
         // lblHistory
         this.lblHistory.Text = "最近订单";

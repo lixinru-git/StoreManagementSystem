@@ -17,6 +17,8 @@ partial class UC_Report
     private GroupBox grpChart2;
     private Chart chartSales;
     private Chart chartTopProducts;
+    private Label lblFrom;
+    private Label lblTo;
 
     protected override void Dispose(bool disposing)
     {
@@ -79,15 +81,15 @@ partial class UC_Report
         this.lblOrderCount.Font = new Font("微软雅黑", 18F, FontStyle.Bold);
         this.lblOrderCount.ForeColor = Color.Green;
 
-        // 静态文本标签
-        Label lblFrom = new Label();
-        lblFrom.Text = "从:";
-        lblFrom.Location = new Point(15, 50);
-        lblFrom.Size = new Size(25, 25);
-        Label lblTo = new Label();
-        lblTo.Text = "到:";
-        lblTo.Location = new Point(180, 50);
-        lblTo.Size = new Size(25, 25);
+        // 日期选择标签
+        this.lblFrom = new Label();
+        this.lblFrom.Text = "从:";
+        this.lblFrom.Location = new Point(15, 50);
+        this.lblFrom.Size = new Size(25, 25);
+        this.lblTo = new Label();
+        this.lblTo.Text = "到:";
+        this.lblTo.Location = new Point(180, 50);
+        this.lblTo.Size = new Size(25, 25);
 
         // grpChart1 - 每日销售额趋势
         this.grpChart1.Text = "每日销售额趋势";
@@ -116,9 +118,9 @@ partial class UC_Report
         this.grpChart2.Controls.Add(this.chartTopProducts);
 
         this.Controls.Add(this.lblTitle);
-        this.Controls.Add(lblFrom);
+        this.Controls.Add(this.lblFrom);
         this.Controls.Add(this.dtpFrom);
-        this.Controls.Add(lblTo);
+        this.Controls.Add(this.lblTo);
         this.Controls.Add(this.dtpTo);
         this.Controls.Add(this.btnRefresh);
         this.Controls.Add(this.lblPeriod);
