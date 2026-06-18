@@ -44,11 +44,20 @@ partial class UC_Sale
         txtSearch = new TextBox();
         btnSearch = new Button();
         dgvProducts = new DataGridView();
+        dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
         nudQty = new NumericUpDown();
         btnAddCart = new Button();
         btnRemoveCart = new Button();
         btnClearCart = new Button();
         dgvCart = new DataGridView();
+        dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
         lblSubtotal = new Label();
         lblDiscount = new Label();
         lblTotal = new Label();
@@ -57,6 +66,11 @@ partial class UC_Sale
         lblCustomerInfo = new Label();
         btnCheckout = new Button();
         dgvHistory = new DataGridView();
+        dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
         lblTitle = new Label();
         grpSearch = new GroupBox();
         lblQty = new Label();
@@ -69,20 +83,6 @@ partial class UC_Sale
         lblD = new Label();
         lblT = new Label();
         lblHistory = new Label();
-        dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
-        dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
         ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
         ((System.ComponentModel.ISupportInitialize)nudQty).BeginInit();
         ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
@@ -120,6 +120,34 @@ partial class UC_Sale
         dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         dgvProducts.Size = new Size(692, 200);
         dgvProducts.TabIndex = 2;
+        // 
+        // dataGridViewTextBoxColumn1
+        // 
+        dataGridViewTextBoxColumn1.HeaderText = "ID";
+        dataGridViewTextBoxColumn1.MinimumWidth = 8;
+        dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+        dataGridViewTextBoxColumn1.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn2
+        // 
+        dataGridViewTextBoxColumn2.HeaderText = "商品名称";
+        dataGridViewTextBoxColumn2.MinimumWidth = 8;
+        dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+        dataGridViewTextBoxColumn2.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn3
+        // 
+        dataGridViewTextBoxColumn3.HeaderText = "售价";
+        dataGridViewTextBoxColumn3.MinimumWidth = 8;
+        dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+        dataGridViewTextBoxColumn3.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn4
+        // 
+        dataGridViewTextBoxColumn4.HeaderText = "库存";
+        dataGridViewTextBoxColumn4.MinimumWidth = 8;
+        dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+        dataGridViewTextBoxColumn4.ReadOnly = true;
         // 
         // nudQty
         // 
@@ -172,6 +200,41 @@ partial class UC_Sale
         dgvCart.Size = new Size(692, 199);
         dgvCart.TabIndex = 9;
         // 
+        // dataGridViewTextBoxColumn5
+        // 
+        dataGridViewTextBoxColumn5.HeaderText = "ID";
+        dataGridViewTextBoxColumn5.MinimumWidth = 8;
+        dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+        dataGridViewTextBoxColumn5.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn6
+        // 
+        dataGridViewTextBoxColumn6.HeaderText = "商品名称";
+        dataGridViewTextBoxColumn6.MinimumWidth = 8;
+        dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+        dataGridViewTextBoxColumn6.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn7
+        // 
+        dataGridViewTextBoxColumn7.HeaderText = "单价";
+        dataGridViewTextBoxColumn7.MinimumWidth = 8;
+        dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+        dataGridViewTextBoxColumn7.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn8
+        // 
+        dataGridViewTextBoxColumn8.HeaderText = "数量";
+        dataGridViewTextBoxColumn8.MinimumWidth = 8;
+        dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+        dataGridViewTextBoxColumn8.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn9
+        // 
+        dataGridViewTextBoxColumn9.HeaderText = "小计";
+        dataGridViewTextBoxColumn9.MinimumWidth = 8;
+        dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+        dataGridViewTextBoxColumn9.ReadOnly = true;
+        // 
         // lblSubtotal
         // 
         lblSubtotal.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
@@ -219,7 +282,7 @@ partial class UC_Sale
         // lblCustomerInfo
         // 
         lblCustomerInfo.ForeColor = Color.Gray;
-        lblCustomerInfo.Location = new Point(10, 90);
+        lblCustomerInfo.Location = new Point(19, 84);
         lblCustomerInfo.Name = "lblCustomerInfo";
         lblCustomerInfo.Size = new Size(260, 40);
         lblCustomerInfo.TabIndex = 5;
@@ -251,6 +314,41 @@ partial class UC_Sale
         dgvHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         dgvHistory.Size = new Size(1067, 176);
         dgvHistory.TabIndex = 12;
+        // 
+        // dataGridViewTextBoxColumn10
+        // 
+        dataGridViewTextBoxColumn10.HeaderText = "订单号";
+        dataGridViewTextBoxColumn10.MinimumWidth = 8;
+        dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+        dataGridViewTextBoxColumn10.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn11
+        // 
+        dataGridViewTextBoxColumn11.HeaderText = "金额";
+        dataGridViewTextBoxColumn11.MinimumWidth = 8;
+        dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+        dataGridViewTextBoxColumn11.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn12
+        // 
+        dataGridViewTextBoxColumn12.HeaderText = "支付方式";
+        dataGridViewTextBoxColumn12.MinimumWidth = 8;
+        dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+        dataGridViewTextBoxColumn12.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn13
+        // 
+        dataGridViewTextBoxColumn13.HeaderText = "会员";
+        dataGridViewTextBoxColumn13.MinimumWidth = 8;
+        dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+        dataGridViewTextBoxColumn13.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn14
+        // 
+        dataGridViewTextBoxColumn14.HeaderText = "时间";
+        dataGridViewTextBoxColumn14.MinimumWidth = 8;
+        dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+        dataGridViewTextBoxColumn14.ReadOnly = true;
         // 
         // lblTitle
         // 
@@ -321,9 +419,9 @@ partial class UC_Sale
         // 
         // lblPhone
         // 
-        lblPhone.Location = new Point(19, 87);
+        lblPhone.Location = new Point(19, 90);
         lblPhone.Name = "lblPhone";
-        lblPhone.Size = new Size(93, 37);
+        lblPhone.Size = new Size(94, 37);
         lblPhone.TabIndex = 2;
         lblPhone.Text = "会员手机:";
         // 
@@ -369,104 +467,6 @@ partial class UC_Sale
         lblHistory.Size = new Size(122, 29);
         lblHistory.TabIndex = 11;
         lblHistory.Text = "最近订单";
-        // 
-        // dataGridViewTextBoxColumn1
-        // 
-        dataGridViewTextBoxColumn1.HeaderText = "ID";
-        dataGridViewTextBoxColumn1.MinimumWidth = 8;
-        dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-        dataGridViewTextBoxColumn1.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn2
-        // 
-        dataGridViewTextBoxColumn2.HeaderText = "商品名称";
-        dataGridViewTextBoxColumn2.MinimumWidth = 8;
-        dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-        dataGridViewTextBoxColumn2.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn3
-        // 
-        dataGridViewTextBoxColumn3.HeaderText = "售价";
-        dataGridViewTextBoxColumn3.MinimumWidth = 8;
-        dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-        dataGridViewTextBoxColumn3.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn4
-        // 
-        dataGridViewTextBoxColumn4.HeaderText = "库存";
-        dataGridViewTextBoxColumn4.MinimumWidth = 8;
-        dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-        dataGridViewTextBoxColumn4.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn5
-        // 
-        dataGridViewTextBoxColumn5.HeaderText = "ID";
-        dataGridViewTextBoxColumn5.MinimumWidth = 8;
-        dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-        dataGridViewTextBoxColumn5.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn6
-        // 
-        dataGridViewTextBoxColumn6.HeaderText = "商品名称";
-        dataGridViewTextBoxColumn6.MinimumWidth = 8;
-        dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-        dataGridViewTextBoxColumn6.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn7
-        // 
-        dataGridViewTextBoxColumn7.HeaderText = "单价";
-        dataGridViewTextBoxColumn7.MinimumWidth = 8;
-        dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-        dataGridViewTextBoxColumn7.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn8
-        // 
-        dataGridViewTextBoxColumn8.HeaderText = "数量";
-        dataGridViewTextBoxColumn8.MinimumWidth = 8;
-        dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-        dataGridViewTextBoxColumn8.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn9
-        // 
-        dataGridViewTextBoxColumn9.HeaderText = "小计";
-        dataGridViewTextBoxColumn9.MinimumWidth = 8;
-        dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-        dataGridViewTextBoxColumn9.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn10
-        // 
-        dataGridViewTextBoxColumn10.HeaderText = "订单号";
-        dataGridViewTextBoxColumn10.MinimumWidth = 8;
-        dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-        dataGridViewTextBoxColumn10.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn11
-        // 
-        dataGridViewTextBoxColumn11.HeaderText = "金额";
-        dataGridViewTextBoxColumn11.MinimumWidth = 8;
-        dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-        dataGridViewTextBoxColumn11.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn12
-        // 
-        dataGridViewTextBoxColumn12.HeaderText = "支付方式";
-        dataGridViewTextBoxColumn12.MinimumWidth = 8;
-        dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-        dataGridViewTextBoxColumn12.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn13
-        // 
-        dataGridViewTextBoxColumn13.HeaderText = "会员";
-        dataGridViewTextBoxColumn13.MinimumWidth = 8;
-        dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-        dataGridViewTextBoxColumn13.ReadOnly = true;
-        // 
-        // dataGridViewTextBoxColumn14
-        // 
-        dataGridViewTextBoxColumn14.HeaderText = "时间";
-        dataGridViewTextBoxColumn14.MinimumWidth = 8;
-        dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-        dataGridViewTextBoxColumn14.ReadOnly = true;
         // 
         // UC_Sale
         // 

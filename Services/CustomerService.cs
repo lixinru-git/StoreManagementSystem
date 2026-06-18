@@ -14,7 +14,8 @@ public class CustomerService : ICustomerService
         var q = _db.Customers.AsQueryable();
         if (!string.IsNullOrWhiteSpace(search))
             q = q.Where(c => c.Name.Contains(search) || (c.Phone != null && c.Phone.Contains(search)));
-        return q.OrderByDescending(c => c.TotalSpent).ToListAsync();
+        // SQLite 不支持直接对 decimal 排序，转为 double
+        return q.OrderByDescending(c => (double)c.TotalSpent).ToListAsync();
     }
 
     public Task<Customer?> GetByIdAsync(int id) => _db.Customers.FindAsync(id).AsTask();

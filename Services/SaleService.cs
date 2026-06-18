@@ -117,13 +117,14 @@ public class SaleService : ISaleService
     public async Task<decimal> GetTodaySalesAsync()
     {
         var today = DateTime.Today;
-        return await _db.SaleOrders.Where(o => o.CreatedAt >= today).SumAsync(o => o.Total);
+        // SQLite 不支持直接对 decimal 求和，转为 double 再转回 decimal
+        return (decimal)await _db.SaleOrders.Where(o => o.CreatedAt >= today).SumAsync(o => (double)o.Total);
     }
 
     public async Task<decimal> GetSalesAsync(DateTime from, DateTime to)
     {
         var end = to.AddDays(1);
-        return await _db.SaleOrders.Where(o => o.CreatedAt >= from && o.CreatedAt < end).SumAsync(o => o.Total);
+        return (decimal)await _db.SaleOrders.Where(o => o.CreatedAt >= from && o.CreatedAt < end).SumAsync(o => (double)o.Total);
     }
 
     public async Task<List<(string Name, decimal Total, int Qty)>> GetTopProductsAsync(DateTime from, DateTime to, int top = 10)
@@ -132,11 +133,11 @@ public class SaleService : ISaleService
         var data = await _db.SaleItems
             .Where(i => i.SaleOrder.CreatedAt >= from && i.SaleOrder.CreatedAt < end)
             .GroupBy(i => i.Product.Name)
-            .Select(g => new { Name = g.Key, Total = g.Sum(i => i.Subtotal), Qty = g.Sum(i => i.Quantity) })
+            .Select(g => new { Name = g.Key, Total = g.Sum(i => (double)i.Subtotal), Qty = g.Sum(i => i.Quantity) })
             .OrderByDescending(x => x.Total)
             .Take(top)
             .ToListAsync();
-        return data.Select(x => (x.Name, x.Total, x.Qty)).ToList();
+        return data.Select(x => (x.Name, (decimal)x.Total, x.Qty)).ToList();
     }
 
     public async Task<List<(DateTime Date, decimal Total)>> GetDailySalesAsync(DateTime from, DateTime to)
@@ -145,9 +146,9 @@ public class SaleService : ISaleService
         var data = await _db.SaleOrders
             .Where(o => o.CreatedAt >= from && o.CreatedAt < end)
             .GroupBy(o => o.CreatedAt.Date)
-            .Select(g => new { Date = g.Key, Total = g.Sum(o => o.Total) })
+            .Select(g => new { Date = g.Key, Total = g.Sum(o => (double)o.Total) })
             .OrderBy(x => x.Date)
             .ToListAsync();
-        return data.Select(x => (x.Date, x.Total)).ToList();
+        return data.Select(x => (x.Date, (decimal)x.Total)).ToList();
     }
 }
