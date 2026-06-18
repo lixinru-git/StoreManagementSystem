@@ -41,257 +41,472 @@ partial class UC_Sale
 
     private void InitializeComponent()
     {
-        this.txtSearch = new TextBox();
-        this.btnSearch = new Button();
-        this.dgvProducts = new DataGridView();
-        this.nudQty = new NumericUpDown();
-        this.btnAddCart = new Button();
-        this.btnRemoveCart = new Button();
-        this.btnClearCart = new Button();
-        this.dgvCart = new DataGridView();
-        this.lblSubtotal = new Label();
-        this.lblDiscount = new Label();
-        this.lblTotal = new Label();
-        this.cboPayment = new ComboBox();
-        this.txtPhone = new TextBox();
-        this.lblCustomerInfo = new Label();
-        this.btnCheckout = new Button();
-        this.dgvHistory = new DataGridView();
-        this.lblTitle = new Label();
-        this.grpSearch = new GroupBox();
-        this.lblQty = new Label();
-        this.lblCart = new Label();
-        this.grpCheckout = new GroupBox();
-        this.lblHistory = new Label();
-        this.btnFindMember = new Button();
-        this.lblPay = new Label();
-        this.lblPhone = new Label();
-        ((System.ComponentModel.ISupportInitialize)this.dgvProducts).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)this.nudQty).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)this.dgvCart).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)this.dgvHistory).BeginInit();
-        this.grpSearch.SuspendLayout();
-        this.grpCheckout.SuspendLayout();
-        this.SuspendLayout();
-
-        // lblTitle
-        this.lblTitle.Text = "销售收银";
-        this.lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
-        this.lblTitle.Location = new Point(15, 10);
-        this.lblTitle.Size = new Size(200, 30);
-
-        // grpSearch
-        this.grpSearch.Text = "商品搜索";
-        this.grpSearch.Location = new Point(15, 45);
-        this.grpSearch.Size = new Size(480, 55);
-        this.txtSearch.Location = new Point(10, 22);
-        this.txtSearch.Size = new Size(300, 23);
-        this.btnSearch.Text = "搜索";
-        this.btnSearch.Location = new Point(320, 20);
-        this.btnSearch.Size = new Size(70, 28);
-        this.btnSearch.Click += this.BtnSearch_Click;
-        this.grpSearch.Controls.Add(this.txtSearch);
-        this.grpSearch.Controls.Add(this.btnSearch);
-
+        txtSearch = new TextBox();
+        btnSearch = new Button();
+        dgvProducts = new DataGridView();
+        nudQty = new NumericUpDown();
+        btnAddCart = new Button();
+        btnRemoveCart = new Button();
+        btnClearCart = new Button();
+        dgvCart = new DataGridView();
+        lblSubtotal = new Label();
+        lblDiscount = new Label();
+        lblTotal = new Label();
+        cboPayment = new ComboBox();
+        txtPhone = new TextBox();
+        lblCustomerInfo = new Label();
+        btnCheckout = new Button();
+        dgvHistory = new DataGridView();
+        lblTitle = new Label();
+        grpSearch = new GroupBox();
+        lblQty = new Label();
+        lblCart = new Label();
+        grpCheckout = new GroupBox();
+        lblPay = new Label();
+        lblPhone = new Label();
+        btnFindMember = new Button();
+        lblS = new Label();
+        lblD = new Label();
+        lblT = new Label();
+        lblHistory = new Label();
+        dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
+        ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)nudQty).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
+        grpSearch.SuspendLayout();
+        grpCheckout.SuspendLayout();
+        SuspendLayout();
+        // 
+        // txtSearch
+        // 
+        txtSearch.Location = new Point(6, 26);
+        txtSearch.Name = "txtSearch";
+        txtSearch.Size = new Size(556, 30);
+        txtSearch.TabIndex = 0;
+        // 
+        // btnSearch
+        // 
+        btnSearch.Location = new Point(568, 26);
+        btnSearch.Name = "btnSearch";
+        btnSearch.Size = new Size(105, 33);
+        btnSearch.TabIndex = 1;
+        btnSearch.Text = "搜索";
+        btnSearch.Click += BtnSearch_Click;
+        // 
         // dgvProducts
-        this.dgvProducts.Location = new Point(15, 105);
-        this.dgvProducts.Size = new Size(480, 200);
-        this.dgvProducts.ReadOnly = true;
-        this.dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        this.dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        this.dgvProducts.AllowUserToAddRows = false;
-        this.dgvProducts.Columns.Add("Id", "ID");
-        this.dgvProducts.Columns[0].Width = 40;
-        this.dgvProducts.Columns.Add("Name", "商品名称");
-        this.dgvProducts.Columns.Add("Price", "售价");
-        this.dgvProducts.Columns[2].Width = 60;
-        this.dgvProducts.Columns.Add("Stock", "库存");
-        this.dgvProducts.Columns[3].Width = 50;
-
-        // lblQty
-        this.lblQty.Text = "数量:";
-        this.lblQty.Location = new Point(15, 315);
-        this.lblQty.Size = new Size(40, 25);
-
+        // 
+        dgvProducts.AllowUserToAddRows = false;
+        dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvProducts.ColumnHeadersHeight = 34;
+        dgvProducts.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+        dgvProducts.Location = new Point(15, 133);
+        dgvProducts.Name = "dgvProducts";
+        dgvProducts.ReadOnly = true;
+        dgvProducts.RowHeadersWidth = 62;
+        dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgvProducts.Size = new Size(692, 200);
+        dgvProducts.TabIndex = 2;
+        // 
         // nudQty
-        this.nudQty.Location = new Point(55, 313);
-        this.nudQty.Size = new Size(60, 23);
-        this.nudQty.Minimum = 1;
-        this.nudQty.Maximum = 999;
-        this.nudQty.Value = 1;
-
+        // 
+        nudQty.Location = new Point(78, 342);
+        nudQty.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
+        nudQty.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+        nudQty.Name = "nudQty";
+        nudQty.Size = new Size(75, 30);
+        nudQty.TabIndex = 4;
+        nudQty.Value = new decimal(new int[] { 1, 0, 0, 0 });
+        // 
         // btnAddCart
-        this.btnAddCart.Text = "加入购物车";
-        this.btnAddCart.Location = new Point(125, 310);
-        this.btnAddCart.Size = new Size(100, 30);
-        this.btnAddCart.Click += this.BtnAddCart_Click;
-
+        // 
+        btnAddCart.Location = new Point(179, 339);
+        btnAddCart.Name = "btnAddCart";
+        btnAddCart.Size = new Size(116, 33);
+        btnAddCart.TabIndex = 5;
+        btnAddCart.Text = "加入购物车";
+        btnAddCart.Click += BtnAddCart_Click;
+        // 
         // btnRemoveCart
-        this.btnRemoveCart.Text = "移除选中";
-        this.btnRemoveCart.Location = new Point(235, 310);
-        this.btnRemoveCart.Size = new Size(80, 30);
-        this.btnRemoveCart.Click += this.BtnRemoveCart_Click;
-
+        // 
+        btnRemoveCart.Location = new Point(325, 339);
+        btnRemoveCart.Name = "btnRemoveCart";
+        btnRemoveCart.Size = new Size(102, 33);
+        btnRemoveCart.TabIndex = 6;
+        btnRemoveCart.Text = "移除选中";
+        btnRemoveCart.Click += BtnRemoveCart_Click;
+        // 
         // btnClearCart
-        this.btnClearCart.Text = "清空";
-        this.btnClearCart.Location = new Point(325, 310);
-        this.btnClearCart.Size = new Size(60, 30);
-        this.btnClearCart.Click += this.BtnClearCart_Click;
-
-        // lblCart
-        this.lblCart.Text = "购物车";
-        this.lblCart.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
-        this.lblCart.Location = new Point(15, 350);
-        this.lblCart.Size = new Size(80, 20);
-
+        // 
+        btnClearCart.Location = new Point(463, 339);
+        btnClearCart.Name = "btnClearCart";
+        btnClearCart.Size = new Size(77, 33);
+        btnClearCart.TabIndex = 7;
+        btnClearCart.Text = "清空";
+        btnClearCart.Click += BtnClearCart_Click;
+        // 
         // dgvCart
-        this.dgvCart.Location = new Point(15, 375);
-        this.dgvCart.Size = new Size(480, 150);
-        this.dgvCart.ReadOnly = true;
-        this.dgvCart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        this.dgvCart.AllowUserToAddRows = false;
-        this.dgvCart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        this.dgvCart.Columns.Add("CartId", "ID");
-        this.dgvCart.Columns[0].Width = 30;
-        this.dgvCart.Columns.Add("CartName", "商品名称");
-        this.dgvCart.Columns.Add("CartPrice", "单价");
-        this.dgvCart.Columns[2].Width = 60;
-        this.dgvCart.Columns.Add("CartQty", "数量");
-        this.dgvCart.Columns[3].Width = 50;
-        this.dgvCart.Columns.Add("CartSub", "小计");
-        this.dgvCart.Columns[4].Width = 70;
-
-        // grpCheckout
-        this.grpCheckout.Text = "结算";
-        this.grpCheckout.Location = new Point(510, 45);
-        this.grpCheckout.Size = new Size(290, 480);
-
-        this.lblPay.Text = "支付方式:";
-        this.lblPay.Location = new Point(10, 25);
-        this.lblPay.Size = new Size(70, 25);
-        this.cboPayment.Location = new Point(85, 23);
-        this.cboPayment.Size = new Size(100, 25);
-        this.cboPayment.Items.Add("Cash");
-        this.cboPayment.Items.Add("WeChat");
-        this.cboPayment.Items.Add("Alipay");
-        this.cboPayment.Items.Add("Card");
-        this.cboPayment.SelectedIndex = 0;
-
-        this.lblPhone.Text = "会员手机:";
-        this.lblPhone.Location = new Point(10, 60);
-        this.lblPhone.Size = new Size(70, 25);
-        this.txtPhone.Location = new Point(85, 58);
-        this.txtPhone.Size = new Size(120, 23);
-        this.btnFindMember.Text = "查询";
-        this.btnFindMember.Location = new Point(210, 56);
-        this.btnFindMember.Size = new Size(50, 28);
-        this.btnFindMember.Click += this.BtnFindMember_Click;
-
-        this.lblCustomerInfo.Location = new Point(10, 90);
-        this.lblCustomerInfo.Size = new Size(260, 40);
-        this.lblCustomerInfo.ForeColor = Color.Gray;
-
-        // 金额汇总
-        this.lblSubtotal.Location = new Point(100, 140);
-        this.lblSubtotal.Size = new Size(160, 25);
-        this.lblSubtotal.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
-        this.lblSubtotal.Text = "¥ 0.00";
-        this.lblDiscount.Location = new Point(100, 170);
-        this.lblDiscount.Size = new Size(160, 25);
-        this.lblDiscount.ForeColor = Color.Red;
-        this.lblDiscount.Text = "- ¥ 0.00";
-        this.lblTotal.Location = new Point(80, 210);
-        this.lblTotal.Size = new Size(180, 30);
-        this.lblTotal.Font = new Font("微软雅黑", 16F, FontStyle.Bold);
-        this.lblTotal.ForeColor = Color.Red;
-        this.lblTotal.Text = "¥ 0.00";
-
-        this.grpCheckout.Controls.Add(this.lblPay);
-        this.grpCheckout.Controls.Add(this.cboPayment);
-        this.grpCheckout.Controls.Add(this.lblPhone);
-        this.grpCheckout.Controls.Add(this.txtPhone);
-        this.grpCheckout.Controls.Add(this.btnFindMember);
-        this.grpCheckout.Controls.Add(this.lblCustomerInfo);
-        this.grpCheckout.Controls.Add(this.lblSubtotal);
-        this.grpCheckout.Controls.Add(this.lblDiscount);
-        this.grpCheckout.Controls.Add(this.lblTotal);
-
+        // 
+        dgvCart.AllowUserToAddRows = false;
+        dgvCart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvCart.ColumnHeadersHeight = 34;
+        dgvCart.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9 });
+        dgvCart.Location = new Point(15, 411);
+        dgvCart.Name = "dgvCart";
+        dgvCart.ReadOnly = true;
+        dgvCart.RowHeadersWidth = 62;
+        dgvCart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgvCart.Size = new Size(692, 199);
+        dgvCart.TabIndex = 9;
+        // 
+        // lblSubtotal
+        // 
+        lblSubtotal.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
+        lblSubtotal.Location = new Point(133, 280);
+        lblSubtotal.Name = "lblSubtotal";
+        lblSubtotal.Size = new Size(156, 25);
+        lblSubtotal.TabIndex = 6;
+        lblSubtotal.Text = "¥ 0.00";
+        // 
+        // lblDiscount
+        // 
+        lblDiscount.ForeColor = Color.Red;
+        lblDiscount.Location = new Point(133, 340);
+        lblDiscount.Name = "lblDiscount";
+        lblDiscount.Size = new Size(137, 27);
+        lblDiscount.TabIndex = 7;
+        lblDiscount.Text = "- ¥ 0.00";
+        // 
+        // lblTotal
+        // 
+        lblTotal.Font = new Font("微软雅黑", 16F, FontStyle.Bold);
+        lblTotal.ForeColor = Color.Red;
+        lblTotal.Location = new Point(133, 392);
+        lblTotal.Name = "lblTotal";
+        lblTotal.Size = new Size(156, 49);
+        lblTotal.TabIndex = 8;
+        lblTotal.Text = "¥ 0.00";
+        // 
+        // cboPayment
+        // 
+        cboPayment.Items.AddRange(new object[] { "Cash", "WeChat", "Alipay", "Card" });
+        cboPayment.Location = new Point(119, 40);
+        cboPayment.Name = "cboPayment";
+        cboPayment.Size = new Size(118, 32);
+        cboPayment.TabIndex = 1;
+        cboPayment.SelectedIndexChanged += cboPayment_SelectedIndexChanged;
+        // 
+        // txtPhone
+        // 
+        txtPhone.Location = new Point(108, 87);
+        txtPhone.Name = "txtPhone";
+        txtPhone.Size = new Size(213, 30);
+        txtPhone.TabIndex = 3;
+        // 
+        // lblCustomerInfo
+        // 
+        lblCustomerInfo.ForeColor = Color.Gray;
+        lblCustomerInfo.Location = new Point(10, 90);
+        lblCustomerInfo.Name = "lblCustomerInfo";
+        lblCustomerInfo.Size = new Size(260, 40);
+        lblCustomerInfo.TabIndex = 5;
+        // 
         // btnCheckout
-        this.btnCheckout.Text = "结算";
-        this.btnCheckout.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
-        this.btnCheckout.Location = new Point(15, 260);
-        this.btnCheckout.Size = new Size(250, 45);
-        this.btnCheckout.BackColor = Color.FromArgb(70, 130, 180);
-        this.btnCheckout.ForeColor = Color.White;
-        this.btnCheckout.FlatStyle = FlatStyle.Flat;
-        this.btnCheckout.Click += this.BtnCheckout_Click;
-        this.grpCheckout.Controls.Add(this.btnCheckout);
-
-        // 小计/折扣/合计标签(静态文本)
-        this.lblS = new Label();
-        this.lblS.Text = "小计:";
-        this.lblS.Location = new Point(10, 140);
-        this.lblS.Size = new Size(80, 25);
-        this.grpCheckout.Controls.Add(this.lblS);
-        this.lblD = new Label();
-        this.lblD.Text = "会员折扣:";
-        this.lblD.Location = new Point(10, 170);
-        this.lblD.Size = new Size(80, 25);
-        this.grpCheckout.Controls.Add(this.lblD);
-        this.lblT = new Label();
-        this.lblT.Text = "合计:";
-        this.lblT.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
-        this.lblT.Location = new Point(10, 210);
-        this.lblT.Size = new Size(80, 30);
-        this.grpCheckout.Controls.Add(this.lblT);
-
-        // lblHistory
-        this.lblHistory.Text = "最近订单";
-        this.lblHistory.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
-        this.lblHistory.Location = new Point(15, 535);
-        this.lblHistory.Size = new Size(80, 20);
-
+        // 
+        btnCheckout.BackColor = Color.FromArgb(70, 130, 180);
+        btnCheckout.FlatStyle = FlatStyle.Flat;
+        btnCheckout.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+        btnCheckout.ForeColor = Color.White;
+        btnCheckout.Location = new Point(35, 469);
+        btnCheckout.Name = "btnCheckout";
+        btnCheckout.Size = new Size(254, 47);
+        btnCheckout.TabIndex = 9;
+        btnCheckout.Text = "结算";
+        btnCheckout.UseVisualStyleBackColor = false;
+        btnCheckout.Click += BtnCheckout_Click;
+        // 
         // dgvHistory
-        this.dgvHistory.Location = new Point(15, 558);
-        this.dgvHistory.Size = new Size(785, 150);
-        this.dgvHistory.ReadOnly = true;
-        this.dgvHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        this.dgvHistory.AllowUserToAddRows = false;
-        this.dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        this.dgvHistory.Columns.Add("HOrderNo", "订单号");
-        this.dgvHistory.Columns[0].Width = 160;
-        this.dgvHistory.Columns.Add("HTotal", "金额");
-        this.dgvHistory.Columns[1].Width = 80;
-        this.dgvHistory.Columns.Add("HPayment", "支付方式");
-        this.dgvHistory.Columns[2].Width = 80;
-        this.dgvHistory.Columns.Add("HCustomer", "会员");
-        this.dgvHistory.Columns[3].Width = 80;
-        this.dgvHistory.Columns.Add("HTime", "时间");
-
-        // 添加到控件
-        this.Controls.Add(this.lblTitle);
-        this.Controls.Add(this.grpSearch);
-        this.Controls.Add(this.dgvProducts);
-        this.Controls.Add(this.lblQty);
-        this.Controls.Add(this.nudQty);
-        this.Controls.Add(this.btnAddCart);
-        this.Controls.Add(this.btnRemoveCart);
-        this.Controls.Add(this.btnClearCart);
-        this.Controls.Add(this.lblCart);
-        this.Controls.Add(this.dgvCart);
-        this.Controls.Add(this.grpCheckout);
-        this.Controls.Add(this.lblHistory);
-        this.Controls.Add(this.dgvHistory);
-
-        ((System.ComponentModel.ISupportInitialize)this.dgvProducts).EndInit();
-        ((System.ComponentModel.ISupportInitialize)this.nudQty).EndInit();
-        ((System.ComponentModel.ISupportInitialize)this.dgvCart).EndInit();
-        ((System.ComponentModel.ISupportInitialize)this.dgvHistory).EndInit();
-        this.grpSearch.ResumeLayout(false);
-        this.grpSearch.PerformLayout();
-        this.grpCheckout.ResumeLayout(false);
-        this.grpCheckout.PerformLayout();
-        this.ResumeLayout(false);
-        this.PerformLayout();
+        // 
+        dgvHistory.AllowUserToAddRows = false;
+        dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvHistory.ColumnHeadersHeight = 34;
+        dgvHistory.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11, dataGridViewTextBoxColumn12, dataGridViewTextBoxColumn13, dataGridViewTextBoxColumn14 });
+        dgvHistory.Location = new Point(15, 645);
+        dgvHistory.Name = "dgvHistory";
+        dgvHistory.ReadOnly = true;
+        dgvHistory.RowHeadersWidth = 62;
+        dgvHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgvHistory.Size = new Size(1067, 176);
+        dgvHistory.TabIndex = 12;
+        // 
+        // lblTitle
+        // 
+        lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
+        lblTitle.Location = new Point(15, 11);
+        lblTitle.Name = "lblTitle";
+        lblTitle.Size = new Size(212, 51);
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "销售收银";
+        // 
+        // grpSearch
+        // 
+        grpSearch.Controls.Add(txtSearch);
+        grpSearch.Controls.Add(btnSearch);
+        grpSearch.Location = new Point(15, 65);
+        grpSearch.Name = "grpSearch";
+        grpSearch.Size = new Size(692, 62);
+        grpSearch.TabIndex = 1;
+        grpSearch.TabStop = false;
+        grpSearch.Text = "商品搜索";
+        // 
+        // lblQty
+        // 
+        lblQty.Location = new Point(15, 342);
+        lblQty.Name = "lblQty";
+        lblQty.Size = new Size(57, 28);
+        lblQty.TabIndex = 3;
+        lblQty.Text = "数量:";
+        // 
+        // lblCart
+        // 
+        lblCart.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
+        lblCart.Location = new Point(15, 378);
+        lblCart.Name = "lblCart";
+        lblCart.Size = new Size(121, 30);
+        lblCart.TabIndex = 8;
+        lblCart.Text = "购物车";
+        // 
+        // grpCheckout
+        // 
+        grpCheckout.Controls.Add(lblPay);
+        grpCheckout.Controls.Add(cboPayment);
+        grpCheckout.Controls.Add(lblPhone);
+        grpCheckout.Controls.Add(txtPhone);
+        grpCheckout.Controls.Add(btnFindMember);
+        grpCheckout.Controls.Add(lblCustomerInfo);
+        grpCheckout.Controls.Add(lblSubtotal);
+        grpCheckout.Controls.Add(lblDiscount);
+        grpCheckout.Controls.Add(lblTotal);
+        grpCheckout.Controls.Add(btnCheckout);
+        grpCheckout.Controls.Add(lblS);
+        grpCheckout.Controls.Add(lblD);
+        grpCheckout.Controls.Add(lblT);
+        grpCheckout.Location = new Point(755, 65);
+        grpCheckout.Name = "grpCheckout";
+        grpCheckout.Size = new Size(327, 545);
+        grpCheckout.TabIndex = 10;
+        grpCheckout.TabStop = false;
+        grpCheckout.Text = "结算";
+        // 
+        // lblPay
+        // 
+        lblPay.Location = new Point(19, 40);
+        lblPay.Name = "lblPay";
+        lblPay.Size = new Size(94, 30);
+        lblPay.TabIndex = 0;
+        lblPay.Text = "支付方式:";
+        // 
+        // lblPhone
+        // 
+        lblPhone.Location = new Point(19, 87);
+        lblPhone.Name = "lblPhone";
+        lblPhone.Size = new Size(93, 37);
+        lblPhone.TabIndex = 2;
+        lblPhone.Text = "会员手机:";
+        // 
+        // btnFindMember
+        // 
+        btnFindMember.Location = new Point(253, 40);
+        btnFindMember.Name = "btnFindMember";
+        btnFindMember.Size = new Size(68, 32);
+        btnFindMember.TabIndex = 4;
+        btnFindMember.Text = "查询";
+        btnFindMember.Click += BtnFindMember_Click;
+        // 
+        // lblS
+        // 
+        lblS.Location = new Point(19, 280);
+        lblS.Name = "lblS";
+        lblS.Size = new Size(85, 36);
+        lblS.TabIndex = 10;
+        lblS.Text = "小计:";
+        // 
+        // lblD
+        // 
+        lblD.Location = new Point(19, 340);
+        lblD.Name = "lblD";
+        lblD.Size = new Size(112, 39);
+        lblD.TabIndex = 11;
+        lblD.Text = "会员折扣:";
+        // 
+        // lblT
+        // 
+        lblT.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+        lblT.Location = new Point(19, 401);
+        lblT.Name = "lblT";
+        lblT.Size = new Size(85, 38);
+        lblT.TabIndex = 12;
+        lblT.Text = "合计:";
+        // 
+        // lblHistory
+        // 
+        lblHistory.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
+        lblHistory.Location = new Point(15, 613);
+        lblHistory.Name = "lblHistory";
+        lblHistory.Size = new Size(122, 29);
+        lblHistory.TabIndex = 11;
+        lblHistory.Text = "最近订单";
+        // 
+        // dataGridViewTextBoxColumn1
+        // 
+        dataGridViewTextBoxColumn1.HeaderText = "ID";
+        dataGridViewTextBoxColumn1.MinimumWidth = 8;
+        dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+        dataGridViewTextBoxColumn1.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn2
+        // 
+        dataGridViewTextBoxColumn2.HeaderText = "商品名称";
+        dataGridViewTextBoxColumn2.MinimumWidth = 8;
+        dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+        dataGridViewTextBoxColumn2.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn3
+        // 
+        dataGridViewTextBoxColumn3.HeaderText = "售价";
+        dataGridViewTextBoxColumn3.MinimumWidth = 8;
+        dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+        dataGridViewTextBoxColumn3.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn4
+        // 
+        dataGridViewTextBoxColumn4.HeaderText = "库存";
+        dataGridViewTextBoxColumn4.MinimumWidth = 8;
+        dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+        dataGridViewTextBoxColumn4.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn5
+        // 
+        dataGridViewTextBoxColumn5.HeaderText = "ID";
+        dataGridViewTextBoxColumn5.MinimumWidth = 8;
+        dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+        dataGridViewTextBoxColumn5.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn6
+        // 
+        dataGridViewTextBoxColumn6.HeaderText = "商品名称";
+        dataGridViewTextBoxColumn6.MinimumWidth = 8;
+        dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+        dataGridViewTextBoxColumn6.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn7
+        // 
+        dataGridViewTextBoxColumn7.HeaderText = "单价";
+        dataGridViewTextBoxColumn7.MinimumWidth = 8;
+        dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+        dataGridViewTextBoxColumn7.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn8
+        // 
+        dataGridViewTextBoxColumn8.HeaderText = "数量";
+        dataGridViewTextBoxColumn8.MinimumWidth = 8;
+        dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+        dataGridViewTextBoxColumn8.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn9
+        // 
+        dataGridViewTextBoxColumn9.HeaderText = "小计";
+        dataGridViewTextBoxColumn9.MinimumWidth = 8;
+        dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+        dataGridViewTextBoxColumn9.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn10
+        // 
+        dataGridViewTextBoxColumn10.HeaderText = "订单号";
+        dataGridViewTextBoxColumn10.MinimumWidth = 8;
+        dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+        dataGridViewTextBoxColumn10.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn11
+        // 
+        dataGridViewTextBoxColumn11.HeaderText = "金额";
+        dataGridViewTextBoxColumn11.MinimumWidth = 8;
+        dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+        dataGridViewTextBoxColumn11.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn12
+        // 
+        dataGridViewTextBoxColumn12.HeaderText = "支付方式";
+        dataGridViewTextBoxColumn12.MinimumWidth = 8;
+        dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+        dataGridViewTextBoxColumn12.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn13
+        // 
+        dataGridViewTextBoxColumn13.HeaderText = "会员";
+        dataGridViewTextBoxColumn13.MinimumWidth = 8;
+        dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+        dataGridViewTextBoxColumn13.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn14
+        // 
+        dataGridViewTextBoxColumn14.HeaderText = "时间";
+        dataGridViewTextBoxColumn14.MinimumWidth = 8;
+        dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+        dataGridViewTextBoxColumn14.ReadOnly = true;
+        // 
+        // UC_Sale
+        // 
+        Controls.Add(lblTitle);
+        Controls.Add(grpSearch);
+        Controls.Add(dgvProducts);
+        Controls.Add(lblQty);
+        Controls.Add(nudQty);
+        Controls.Add(btnAddCart);
+        Controls.Add(btnRemoveCart);
+        Controls.Add(btnClearCart);
+        Controls.Add(lblCart);
+        Controls.Add(dgvCart);
+        Controls.Add(grpCheckout);
+        Controls.Add(lblHistory);
+        Controls.Add(dgvHistory);
+        Name = "UC_Sale";
+        Size = new Size(1122, 844);
+        ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+        ((System.ComponentModel.ISupportInitialize)nudQty).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvCart).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
+        grpSearch.ResumeLayout(false);
+        grpSearch.PerformLayout();
+        grpCheckout.ResumeLayout(false);
+        grpCheckout.PerformLayout();
+        ResumeLayout(false);
     }
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
 }

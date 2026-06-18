@@ -164,4 +164,9 @@ public partial class UC_Sale : UserControl
         }
         catch (Exception ex) { MessageBox.Show($"结算失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error); }
     }
+
+    private void cboPayment_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

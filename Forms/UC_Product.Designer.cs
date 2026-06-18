@@ -20,83 +20,167 @@ partial class UC_Product
 
     private void InitializeComponent()
     {
-        this.dgvProducts = new DataGridView();
-        this.txtSearch = new TextBox();
-        this.btnSearch = new Button();
-        this.btnAdd = new Button();
-        this.btnEdit = new Button();
-        this.btnDelete = new Button();
-        this.lblTitle = new Label();
-        ((System.ComponentModel.ISupportInitialize)this.dgvProducts).BeginInit();
-        this.SuspendLayout();
-
-        // lblTitle
-        this.lblTitle.Text = "商品管理";
-        this.lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
-        this.lblTitle.Location = new Point(15, 10);
-        this.lblTitle.Size = new Size(200, 30);
-
-        // txtSearch
-        this.txtSearch.Location = new Point(15, 50);
-        this.txtSearch.Size = new Size(250, 23);
-
-        // btnSearch
-        this.btnSearch.Text = "搜索";
-        this.btnSearch.Location = new Point(275, 48);
-        this.btnSearch.Size = new Size(60, 28);
-        this.btnSearch.Click += this.BtnSearch_Click;
-
-        // btnAdd
-        this.btnAdd.Text = "＋ 添加商品";
-        this.btnAdd.Location = new Point(360, 48);
-        this.btnAdd.Size = new Size(100, 28);
-        this.btnAdd.Click += this.BtnAdd_Click;
-
-        // btnEdit
-        this.btnEdit.Text = "✏ 编辑";
-        this.btnEdit.Location = new Point(470, 48);
-        this.btnEdit.Size = new Size(80, 28);
-        this.btnEdit.Click += this.BtnEdit_Click;
-
-        // btnDelete
-        this.btnDelete.Text = "✕ 删除";
-        this.btnDelete.Location = new Point(560, 48);
-        this.btnDelete.Size = new Size(80, 28);
-        this.btnDelete.Click += this.BtnDelete_Click;
-
+        dgvProducts = new DataGridView();
+        txtSearch = new TextBox();
+        btnSearch = new Button();
+        btnAdd = new Button();
+        btnEdit = new Button();
+        btnDelete = new Button();
+        lblTitle = new Label();
+        dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+        dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+        ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+        SuspendLayout();
+        // 
         // dgvProducts
-        this.dgvProducts.Location = new Point(15, 85);
-        this.dgvProducts.Size = new Size(770, 480);
-        this.dgvProducts.ReadOnly = true;
-        this.dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        this.dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        this.dgvProducts.AllowUserToAddRows = false;
-        this.dgvProducts.Columns.Add("PId", "ID");
-        this.dgvProducts.Columns[0].Width = 40;
-        this.dgvProducts.Columns.Add("PName", "商品名称");
-        this.dgvProducts.Columns.Add("PBarcode", "条码");
-        this.dgvProducts.Columns[2].Width = 100;
-        this.dgvProducts.Columns.Add("PCategory", "分类");
-        this.dgvProducts.Columns[3].Width = 70;
-        this.dgvProducts.Columns.Add("PCost", "进价");
-        this.dgvProducts.Columns[4].Width = 60;
-        this.dgvProducts.Columns.Add("PPrice", "售价");
-        this.dgvProducts.Columns[5].Width = 60;
-        this.dgvProducts.Columns.Add("PStock", "库存");
-        this.dgvProducts.Columns[6].Width = 50;
-        this.dgvProducts.Columns.Add("PThreshold", "预警");
-        this.dgvProducts.Columns[7].Width = 50;
-
-        this.Controls.Add(this.lblTitle);
-        this.Controls.Add(this.txtSearch);
-        this.Controls.Add(this.btnSearch);
-        this.Controls.Add(this.btnAdd);
-        this.Controls.Add(this.btnEdit);
-        this.Controls.Add(this.btnDelete);
-        this.Controls.Add(this.dgvProducts);
-
-        ((System.ComponentModel.ISupportInitialize)this.dgvProducts).EndInit();
-        this.ResumeLayout(false);
-        this.PerformLayout();
+        // 
+        dgvProducts.AllowUserToAddRows = false;
+        dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvProducts.ColumnHeadersHeight = 34;
+        dgvProducts.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8 });
+        dgvProducts.Location = new Point(32, 115);
+        dgvProducts.Name = "dgvProducts";
+        dgvProducts.ReadOnly = true;
+        dgvProducts.RowHeadersWidth = 62;
+        dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgvProducts.Size = new Size(770, 480);
+        dgvProducts.TabIndex = 6;
+        // 
+        // txtSearch
+        // 
+        txtSearch.Location = new Point(32, 67);
+        txtSearch.Name = "txtSearch";
+        txtSearch.Size = new Size(250, 30);
+        txtSearch.TabIndex = 1;
+        // 
+        // btnSearch
+        // 
+        btnSearch.Location = new Point(304, 67);
+        btnSearch.Name = "btnSearch";
+        btnSearch.Size = new Size(70, 40);
+        btnSearch.TabIndex = 2;
+        btnSearch.Text = "搜索";
+        btnSearch.Click += BtnSearch_Click;
+        // 
+        // btnAdd
+        // 
+        btnAdd.Location = new Point(395, 67);
+        btnAdd.Name = "btnAdd";
+        btnAdd.Size = new Size(146, 40);
+        btnAdd.TabIndex = 3;
+        btnAdd.Text = "＋ 添加商品";
+        btnAdd.Click += BtnAdd_Click;
+        // 
+        // btnEdit
+        // 
+        btnEdit.Location = new Point(559, 69);
+        btnEdit.Name = "btnEdit";
+        btnEdit.Size = new Size(92, 38);
+        btnEdit.TabIndex = 4;
+        btnEdit.Text = "✏ 编辑";
+        btnEdit.Click += BtnEdit_Click;
+        // 
+        // btnDelete
+        // 
+        btnDelete.Location = new Point(685, 67);
+        btnDelete.Name = "btnDelete";
+        btnDelete.Size = new Size(89, 40);
+        btnDelete.TabIndex = 5;
+        btnDelete.Text = "✕ 删除";
+        btnDelete.Click += BtnDelete_Click;
+        // 
+        // lblTitle
+        // 
+        lblTitle.Font = new Font("微软雅黑", 14F, FontStyle.Bold);
+        lblTitle.Location = new Point(32, 10);
+        lblTitle.Name = "lblTitle";
+        lblTitle.Size = new Size(214, 54);
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "商品管理";
+        // 
+        // dataGridViewTextBoxColumn1
+        // 
+        dataGridViewTextBoxColumn1.HeaderText = "ID";
+        dataGridViewTextBoxColumn1.MinimumWidth = 8;
+        dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+        dataGridViewTextBoxColumn1.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn2
+        // 
+        dataGridViewTextBoxColumn2.HeaderText = "商品名称";
+        dataGridViewTextBoxColumn2.MinimumWidth = 8;
+        dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+        dataGridViewTextBoxColumn2.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn3
+        // 
+        dataGridViewTextBoxColumn3.HeaderText = "条码";
+        dataGridViewTextBoxColumn3.MinimumWidth = 8;
+        dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+        dataGridViewTextBoxColumn3.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn4
+        // 
+        dataGridViewTextBoxColumn4.HeaderText = "分类";
+        dataGridViewTextBoxColumn4.MinimumWidth = 8;
+        dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+        dataGridViewTextBoxColumn4.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn5
+        // 
+        dataGridViewTextBoxColumn5.HeaderText = "进价";
+        dataGridViewTextBoxColumn5.MinimumWidth = 8;
+        dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+        dataGridViewTextBoxColumn5.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn6
+        // 
+        dataGridViewTextBoxColumn6.HeaderText = "售价";
+        dataGridViewTextBoxColumn6.MinimumWidth = 8;
+        dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+        dataGridViewTextBoxColumn6.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn7
+        // 
+        dataGridViewTextBoxColumn7.HeaderText = "库存";
+        dataGridViewTextBoxColumn7.MinimumWidth = 8;
+        dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+        dataGridViewTextBoxColumn7.ReadOnly = true;
+        // 
+        // dataGridViewTextBoxColumn8
+        // 
+        dataGridViewTextBoxColumn8.HeaderText = "预警";
+        dataGridViewTextBoxColumn8.MinimumWidth = 8;
+        dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+        dataGridViewTextBoxColumn8.ReadOnly = true;
+        // 
+        // UC_Product
+        // 
+        Controls.Add(lblTitle);
+        Controls.Add(txtSearch);
+        Controls.Add(btnSearch);
+        Controls.Add(btnAdd);
+        Controls.Add(btnEdit);
+        Controls.Add(btnDelete);
+        Controls.Add(dgvProducts);
+        Name = "UC_Product";
+        Size = new Size(835, 616);
+        ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+        ResumeLayout(false);
+        PerformLayout();
     }
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+    private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
 }
