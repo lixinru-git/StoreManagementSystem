@@ -85,6 +85,12 @@ public partial class UC_Sale : UserControl
         if (idx >= 0 && idx < _cart.Count) { _cart.RemoveAt(idx); RefreshCart(); }
     }
 
+    private void BtnClearCart_Click(object? sender, EventArgs e)
+    {
+        _cart.Clear();
+        RefreshCart();
+    }
+
     private void RefreshCart()
     {
         dgvCart.Rows.Clear();

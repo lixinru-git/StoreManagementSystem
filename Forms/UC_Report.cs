@@ -12,7 +12,17 @@ public partial class UC_Report : UserControl
     {
         _saleSvc = Program.ServiceProvider.GetRequiredService<ISaleService>();
         InitializeComponent();
-        Load += async (s, e) => await LoadReportsAsync();
+        this.Load += UC_Report_Load;
+    }
+
+    private async void UC_Report_Load(object? sender, EventArgs e)
+    {
+        await LoadReportsAsync();
+    }
+
+    private async void BtnRefresh_Click(object? sender, EventArgs e)
+    {
+        await LoadReportsAsync();
     }
 
     private async Task LoadReportsAsync()

@@ -17,6 +17,11 @@ public partial class UC_Product : UserControl
         Load += async (s, e) => await LoadProductsAsync();
     }
 
+    private async void BtnSearch_Click(object? sender, EventArgs e)
+    {
+        await LoadProductsAsync(txtSearch.Text.Trim());
+    }
+
     private async Task LoadProductsAsync(string? search = null)
     {
         try

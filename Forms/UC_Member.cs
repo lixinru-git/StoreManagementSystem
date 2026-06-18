@@ -15,6 +15,11 @@ public partial class UC_Member : UserControl
         Load += async (s, e) => await LoadMembersAsync();
     }
 
+    private async void BtnSearch_Click(object? sender, EventArgs e)
+    {
+        await LoadMembersAsync(txtSearch.Text.Trim());
+    }
+
     private async Task LoadMembersAsync(string? search = null)
     {
         try
