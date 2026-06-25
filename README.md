@@ -59,7 +59,3 @@ dotnet run
 ├── Project_Proposal.md  # 项目方案
 └── Testing_Report.md    # 测试报告
 ```
-
-## 额外说明
-
-本项目为《Windows程序设计》课程综合作业。
