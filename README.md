@@ -60,6 +60,6 @@ dotnet run
 └── Testing_Report.md    # 测试报告
 ```
 
-## 许可证
+## 额外说明
 
 本项目为《Windows程序设计》课程综合作业。
