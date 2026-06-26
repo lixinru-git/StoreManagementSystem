@@ -29,23 +29,23 @@
 
 ```
 ┌──────────────────────────────────────────┐
-│              UI Layer (Forms)             │
+│              UI Layer (Forms)            │
 │  MainForm ─┬─ UC_Sale                    │
 │            ├─ UC_Product                 │
 │            ├─ UC_Stock                   │
 │            ├─ UC_Member                  │
 │            └─ UC_Report                  │
 ├──────────────────────────────────────────┤
-│          Service Layer (Services)         │
+│          Service Layer (Services)        │
 │  ISaleService → SaleService              │
 │  IProductService → ProductService        │
 │  IInventoryService → InventoryService    │
 │  ICustomerService → CustomerService      │
 ├──────────────────────────────────────────┤
-│          Data Layer (EF Core + SQLite)    │
+│          Data Layer (EF Core + SQLite)   │
 │  AppDbContext → 7 Entity Models          │
 │  Category/Product/SaleOrder/SaleItem     │
-│  Customer/StockIn/StockOut              │
+│  Customer/StockIn/StockOut               │
 └──────────────────────────────────────────┘
 ```
 
